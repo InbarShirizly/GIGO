@@ -1,4 +1,6 @@
 /.ipynb_checkpoints
+.DS_Store
+
 /client/src/.env.local.local
 
 # dependencies
@@ -23,3 +25,4 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
