@@ -2,12 +2,14 @@ import pymongo
 from flask import Flask
 import json
 from flask_cors import CORS
-
+from flask import request
 
 
 app = Flask(__name__)
 cors = CORS(app)
 x = ''
+gigo_DB = []
+
 
 @app.before_first_request
 def before_first_request():
@@ -25,6 +27,14 @@ def hello_world():
 
     resp = app.response_class(response=json.dumps({"dict":x['test']}), status=200, mimetype="application/json")
     return resp
+
+
+@app.route("/locations/add", methods=["POST"])
+def add_location():
+    print("adding a location api")
+    posted_data = request.json
+    gigo_DB.gigo_COL.insert_one(posted_data)
+    return "saved"
 
 
 if __name__ == "__main__":
