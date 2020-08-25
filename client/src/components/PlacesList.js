@@ -5,10 +5,10 @@ const PlacesList = ({ markers }) => {
     return (
         <div className = "plases-list">
             {markers.map(marker => {
-          return<Card key = {marker.name} {...marker} />
+          return<Card key = {marker.id} {...marker} />
         })}
         </div>
     )
 }
 
-export default PlacesList
+export default PlacesList;
