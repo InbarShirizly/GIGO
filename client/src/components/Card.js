@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ButtonCounter from "../components/ButtonCounter";
 import StarRating from "../components/StarRating";
+import ButtonDone from "../components/ButtonDone";
 
 export default function Card({ image, name, date_created }) {
   return (
@@ -15,8 +16,14 @@ export default function Card({ image, name, date_created }) {
           <div className="img-container w-80">
             <img src={image} alt={name} />
           </div>
-          <div className="left-50 center">
-            <ButtonCounter />
+          <div className="d-flex flex-column center">
+            {/* <div className="left-50 center"> */}
+            <div>
+              <ButtonCounter />
+            </div>
+            <div className="center mt-3">
+              <ButtonDone />
+            </div>
           </div>
         </div>
         <div className="no-outline">
