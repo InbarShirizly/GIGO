@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  min-height: 100vh;
+  color: black;
+  /* color: white; */
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('./assets/grass-background-nature-natural.jpg');
+  /* background-image: url('https://wallpapersafari.com/w/G5zQrg'); */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.add-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.25);
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.navbar-logo {
+  color: #317810;
+  font-size: 30px;
+}
+
+.green-button {
+  background-color: #0b3405;
+  color: white;
+}
+
+.button:hover {
+  color: rgb(153, 249, 152)
+}
+
+.hero {
+  height: 350px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #317810;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ====== 
+Error
+====== */
+
+.error-page {
+  display: flex;
+  justify-content: center;
+  color: #1a7205;
+}
+
+.error-container {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.btn-back {
+  border-radius: 0;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  background: var(--primaryDarkColor);
+  border-color: var(--primaryDarkColor);
+  color: #ffffff;
+}
+
+.btn-back:hover {
+  background: #1a7205;
+  color: #ffffff;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.pulse {
+  position: absolute;
+  left: 48%;
+  margin-top: -60px;
+  background-color: #0b3405;
+  color: #ffffff;
+  border: none;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.85);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation-name: unset;
+  background-color: #0b3405;
+}
+
+.info-window {
+  color: black;
+}
+
+.info-window-image {
+  width: 90px;
+}
+
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
+.card-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.img-container {
+  width: 200px;
+  height: 200px;
+  width: cover;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.img-container img {
+  position: absolute;
+  top: 59.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.img-container img:hover {
+  opacity: 0.9;
+}
+
+.border-radius-5 {
+  border-radius: 5px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid grey;
+}
+
+.fixed-position {
+  position: fixed;
+}
