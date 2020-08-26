@@ -14,11 +14,7 @@ class ButtonDone extends React.Component {
   render() {
     return (
       <div>
-        <Modal show={this.state.show} handleClose={this.hideModal}>
-          {/* <p>Please, upload image after cleaning</p> */}
-          {/* <p></p>
-          <p></p>
-          <p></p> */}
+        <Modal show={this.state.show} handleClose={this.hideModal}>         
         </Modal>
         <div className="button-container">
           <button
@@ -35,17 +31,25 @@ class ButtonDone extends React.Component {
 
 export default ButtonDone;
 
-
 const Modal = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
 
   return (
     <div className={showHideClassName}>
-        <section className="modal-main d-flex flex-column justify-content-center align-items-center"> 
-        <p className = "text-center">Please, upload image after cleaning</p>   
-        {children}
-        <button className = "btn btn-outline-success waves-effect w-30 text-center" onClick={handleClose}>Upload</button>
-      </section>
+      <div className="modal-main">
+        <div className="relative">
+          <button className="close" onClick={handleClose}></button>
+          <div className="text-center modal-text ml-5">
+            Please, upload image after cleaning
+          </div>         
+          <button
+            className="btn btn-outline-success waves-effect w-30 absolute-button"
+            onClick={handleClose}
+          >
+            Upload
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

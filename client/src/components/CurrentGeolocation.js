@@ -1,19 +1,19 @@
 import React from 'react';
 import Geocode from "react-geocode";
 
-const GetGeolocation = () => {
+const CurrentGeolocation = () => {
     return (
         <div>
-            
+            Hello
         </div>
     )
 }
 
-export default GetGeolocation
+export default CurrentGeolocation;
 
 
 
-Geocode.setApiKey("AIzaSyDsb7F-VyBJn7r4LilYH_lRHBpPfgyUga8");
+Geocode.setApiKey("AIzaSyBcLA8JiIbmGBihyac92hMgOYjurCb6bDg");
 Geocode.enableDebug();
 
 Geocode.fromLatLng("32.076582", "34.769").then(
@@ -26,4 +26,4 @@ Geocode.fromLatLng("32.076582", "34.769").then(
   }
 );
 
-import "./styles.css";
+

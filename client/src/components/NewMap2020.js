@@ -12,17 +12,17 @@ const API_KEY = process.env.GOOGLE_MAPS_API_KEY;
 
 const mapContainerStyle = {
   height: "100vh",
-  width: "100vw", 
+  width: "100vw",
 };
 
 const center = {
-  lat: 32.089870,
+  lat: 32.08987,
   lng: 34.880451,
 };
 
 const NewMap2020 = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: API_KEY,    
+    googleMapsApiKey: API_KEY,
   });
   const [selected, setSelected] = useState(null);
 
@@ -30,7 +30,7 @@ const NewMap2020 = () => {
   if (!isLoaded) return "Loading...";
 
   return (
-    <div>
+    <div className="position-fixed">
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={12}
@@ -62,7 +62,7 @@ const NewMap2020 = () => {
           >
             <div className="info-window">
               <p>{selected.name}</p>
-              <div className = "d-flex align-items-center">
+              <div className="d-flex align-items-center">
                 <img
                   className="info-window-image"
                   src={selected.image}
@@ -78,5 +78,3 @@ const NewMap2020 = () => {
 };
 
 export default NewMap2020;
-
-

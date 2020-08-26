@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,14 +6,13 @@
   padding: 0;
 }
 
-
 body {
   min-height: 100vh;
   color: black;
   /* color: white; */
   overflow-x: hidden;
-  font-family: 'Open Sans', sans-serif;
-  background-image: url('./assets/grass-background-nature-natural.jpg');
+  font-family: "Open Sans", sans-serif;
+  background-image: url("./assets/grass-background-nature-natural.jpg");
   /* background-image: url('https://wallpapersafari.com/w/G5zQrg'); */
 
   background-size: cover;
@@ -46,7 +43,7 @@ body {
 }
 
 .button:hover {
-  color: rgb(153, 249, 152)
+  color: rgb(153, 249, 152);
 }
 
 .hero {
@@ -109,9 +106,8 @@ Error
   width: 80%;
 }
 
-
 .w-100 {
-  width: 100%
+  width: 100%;
 }
 
 .pulse {
@@ -158,12 +154,10 @@ Error
   align-content: flex-start;
 }
 
-
 .card-title {
   margin-top: 10px;
   font-weight: bold;
 }
-
 
 .img-container {
   width: 400px;
@@ -206,7 +200,7 @@ Error
   border: 1px black;
 }
 
-.button-container {  
+.button-container {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -219,14 +213,122 @@ Error
 
 .center {
   margin: auto;
-  width: 50%; 
+  /* width: 50%;  */
   padding: 10px;
 }
 
 .button-counter:focus {
-  box-shadow: none
+  box-shadow: none;
 }
 
 .error-text {
   color: red;
+}
+
+.space-between {
+  justify-content: "space-between";
+}
+
+*:focus {
+  outline: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+  position: fixed;
+  background: white;
+  width: 30%;
+  height:150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.modal-inner {
+  position: relative;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.modal-text {
+  position: absolute;
+  top: 50px;
+  
+}
+
+.modal-button {
+  position: absolute;
+  top: 200%
+}
+
+/* .modal-close-button {
+  width:20px;
+  height:20px;
+  position: relative;
+  left:61%;
+  top:28%;
+  z-index: 100;
+} */
+
+.close {
+  position: absolute;
+  left:90%;
+  top:10px;  
+  opacity: 0.3;
+  z-index: 100;
+  object-fit: cover;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
+
+/* 
+.border {
+  border: 1px red;
+} */
+
+.relative {
+  position: relative;
+  
+}
+
+.absolute-button {
+  position: absolute;  
+  right: 35%;
+  top: 100px; 
+}
+
+.position-fixed {
+  position: fixed ! important;
 }
